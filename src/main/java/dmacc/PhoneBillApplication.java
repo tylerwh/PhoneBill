@@ -8,14 +8,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 
 import dmacc.controller.BeanConfiguration;
 import dmacc.entities.Address;
 import dmacc.entities.Bill;
 import dmacc.repository.BillRepository;
 
-//@ComponentScan("dmacc.repository.BillRepository")
 @SpringBootApplication
 public class PhoneBillApplication implements CommandLineRunner {
 
@@ -42,14 +40,12 @@ public class PhoneBillApplication implements CommandLineRunner {
 		repo.save(b);
 		
 		Bill j = new Bill("Johnny Jay", "515-554-5554", "iPhone X", 59.99);
-		
 		Address a = new Address("7 Sixth Street", "West Des Moines", "IA");
-		
 		j.setAddress(a);
 		repo.save(j);
 		
 		List<Bill> allTheBills = repo.findAll();
-		for (Bill aBill: allTheBills) {
+		for(Bill aBill: allTheBills) {
 			System.out.println(aBill.toString());
 		}
 	}

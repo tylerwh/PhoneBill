@@ -1,5 +1,6 @@
 package dmacc.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,7 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class Bill {
 
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="billno")
 	private long billNo;
 	private String name;
 	private String phone;

@@ -6,6 +6,4 @@ import org.springframework.stereotype.Repository;
 import dmacc.entities.Bill;
 
 @Repository
-public interface BillRepository extends JpaRepository<Bill, Long> {
-
-}
+public interface BillRepository extends JpaRepository<Bill, Long> {}
