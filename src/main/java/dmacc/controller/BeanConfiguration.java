@@ -11,11 +11,11 @@ public class BeanConfiguration {
 	
 	@Bean
 	public Bill bill() {
-		Bill bean = new Bill();
-		bean.setName("Theodore Geisel");
-		bean.setPhone("555-555-5555");
-		bean.setDevice("Moto X");
-		bean.setAmount(39.99);
+		Bill bean = new Bill("John Smith");
+//		bean.setName("Theodore Geisel");
+//		bean.setPhone("555-555-5555");
+//		bean.setDevice("Moto X");
+//		bean.setAmount(39.99);
 		return bean;
 	}
 	
